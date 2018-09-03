@@ -2,31 +2,31 @@
 
 `schol` is a command line tool that makes it easy to write academic documents in Markdown, manage citations, and publish your work to the web.
 
-## Why schol?
+## Why `schol`?
 
-Why should you use schol? What does schol have that other systems don't?
+Why should you use `schol`? What does `schol` have that other systems don't?
 
- - schol's default output format is mobile and web friendly
- - schol makes managing citations easy
- - schol lets you publish your work to the web with a single command
- - schol is built with Node.js and npm, making it cross-platform and easy to install and extend
- - schol lets you author your work in Markdown
+ - `schol`'s default output format is mobile and web friendly
+ - `schol` makes managing citations easy
+ - `schol` lets you publish your work to the web with a single command
+ - `schol` is built with Node.js and npm, making it cross-platform and easy to install and extend
+ - `schol lets` you author your work in Markdown
 
 ## <a name="#requirements">System Requirements</a>
 
-You can use schol on any machine with the following:
+You can use `schol` on any machine with the following:
 
  - Node.js 8.11 or later
  - Your favorite text editor (Sublime Text, Atom, VSCode, etc.)
  - Your favorite terminal (CMD, PowerShell, Hyper, iTerm2, zsh, bash, etc.)
  - A modern web browser (Chrome, Edge, Firefox, Opera, Safari, etc.)
- - Git (Optional. For publishing to GitHub Pages)
+ - Git (For publishing to GitHub Pages)
 
 This includes all modern varieties of Windows, MacOS, and Linux.
 
 ## Installation
 
-To install schol, run the following in your terminal:
+To install `schol`, run the following in your terminal:
 
 ```sh
 npm install -g schol
@@ -50,13 +50,13 @@ subl .
 
 You can then open `src/index.md` in your editor -- this is where you will save your work.
 
-Next, start schol in edit mode:
+Next, start `schol` in edit mode:
 
 ```sh
 schol edit
 ```
 
-This will display your assignment in your web browser and automatically reload it whenever you save any changes. schol will continue to run in edit mode indefinitely until you stop it (Ctrl + W, closing the terminal, etc.). You might want to open a new terminal window to run other commands.
+This will display your assignment in your web browser and automatically reload it whenever you save any changes. `schol` will continue to run in edit mode indefinitely until you stop it (Ctrl + W, closing the terminal, etc.). You might want to open a new terminal window to run other commands.
 
 Make some changes to `src/index.md` in your editor and save them. Your browser will automatically reload with the latest changes.
 
@@ -66,7 +66,7 @@ Once you are finished your work, render the final output files:
 schol render
 ```
 
-This will save a copy of your finished work and all necessary files to the `docs/` folder in your project directory. Distribute these files however you want -- for example, submit them for grading or review, or upload them to a website.
+This will save a copy of your finished work and all necessary files to the `docs/` folder in your project directory. Distribute these files however you want -- for example, submit them for grading or review, or upload them to a website for publication.
 
 To use `schol` to publish your work to [GitHub Pages free web hosting service](](https://pages.github.com/):
 
@@ -80,7 +80,7 @@ Your work is now published to the web.
 
 ### Front Matter Metadata
 
-schol documents generally begin with a front matter section:
+`schol` documents generally begin with a front matter section:
 
 ```yaml
 title: The Impact of Bees on Hives
@@ -91,7 +91,7 @@ date: 2018-09-01
 ---
 ```
 
-This section is used to define document metadata. Some of this metadata is used internally by schol when it prepares your document. This includes:
+This section is used to define document metadata. Some of this metadata is used internally by `schol` when it prepares your document. This includes:
 
 - The `template` property
 - The `references` property
@@ -101,7 +101,7 @@ Other properties may be defined and used by templates.
 
 ### Templates
 
-Every schol document has a template that determines how it is rendered. Specify it with the `template` property in the front matter of the document:
+Every `schol` document has a template that determines how it is rendered. Specify it with the `template` property in the front matter of the document:
 
 ```markdown
 template: ./my-assignment-template/
@@ -138,11 +138,11 @@ Lorem ipsum...
 
 ```
 
-schol parses your content with [markdown-it](https://github.com/markdown-it/markdown-it) and inserts it into your template for rendering.
+`schol` parses your content with [markdown-it](https://github.com/markdown-it/markdown-it) and inserts it into your template for rendering.
 
 ### Citation Management
 
-schol appends your references to the end of your document, so remember to add a "References" or "Bibliography" header as the last line of your content:
+`schol` appends your references to the end of your document, so remember to add a "References" or "Bibliography" header as the last line of your content:
 
 ```markdown
 ...
@@ -174,9 +174,9 @@ A references entry can be:
 1. A URL
 2. [Anything accepted by Citation.js](https://citation.js.org/api/tutorial-input_formats.html)
 
-For URL references, schol will attempt to automatically parse citation data from the page.
+For URL references, `schol` will attempt to automatically parse citation data from the page.
 
-If unsuccessful, schol will print a warning and treat the citation as a URL without any citation metadata (eg. title, author, etc.). The citation will still appear in your references, but it will show minimal information.
+If unsuccessful, `schol` will print a warning and treat the citation as a URL without any citation metadata (eg. title, author, etc.). The citation will still appear in your references, but it will show minimal information.
 
 If this happens, you can either leave it as is, find a URL for the resource you are citing that includes embedded citation data, or manually add the citation data to your references.
 
@@ -188,13 +188,13 @@ You can specify the citation format to use in your document with the `citation-s
 citation-style: apa-5th-edition
 ```
 
-If no `citation-style` is specified, schol defaults to `apa-5th-edition`.
+If no `citation-style` is specified, `schol` defaults to `apa-5th-edition`.
 
 ## CLI Reference
 
 ### `schol init`
 
-Initializes a new schol project in the current directory.
+Initializes a new `schol` project in the current directory.
 
 ### `schol edit`
 
