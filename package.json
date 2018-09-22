@@ -1,0 +1,15 @@
+{
+  "name": "schol",
+  "version": "0.0.0",
+  "description": "`schol` is a command line tool that makes it easy to write academic documents in Markdown, manage citations, and publish your work to the web.",
+  "main": "schol.js",
+  "bin": "schol.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.18.0"
+  }
+}

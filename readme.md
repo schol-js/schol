@@ -78,9 +78,17 @@ Your work is now published to the web.
 
 ## Features
 
-### Front Matter Metadata
+### Templates and Front Matter Metadata
 
-`schol` documents generally begin with a front matter section:
+Every `schol` document has a template that determines how it is rendered. Specify your document template with the `template` property in `scholfile.yaml` in the root directory of your project:
+
+```yaml
+template: ./my-assignment-template/
+```
+
+If no `template` is specified, [schol-template-default] is used.
+
+Templates embed document metadata like title and author details into their rendered output. Specify document metadata with a front matter section in your document:
 
 ```yaml
 title: The Impact of Bees on Hives
@@ -90,24 +98,6 @@ authors:
 date: 2018-09-01
 ---
 ```
-
-This section is used to define document metadata. Some of this metadata is used internally by `schol` when it prepares your document. This includes:
-
-- The `template` property
-- The `references` property
-- The `citation-style` property
-
-Other properties may be defined and used by templates.
-
-### Templates
-
-Every `schol` document has a template that determines how it is rendered. Specify it with the `template` property in the front matter of the document:
-
-```markdown
-template: ./my-assignment-template/
-```
-
-If no `template` is specified, the [default schol template] is used.
 
 Different templates may require different front matter. For example, a template for a course assignment might require the following front matter:
 
@@ -124,6 +114,8 @@ date: 2018-08-31
 ```
 
 The template will then render these values into a title section for your assignment.
+
+Read the documentation for the template you are using to learn what metadata it requires.
 
 ### Content
 
@@ -182,7 +174,7 @@ If this happens, you can either leave it as is, find a URL for the resource you 
 
 #### Citation Styles
 
-You can specify the citation format to use in your document with the `citation-style` front matter property -- just specify the ID of any style in the [Zotero Style Repository](https://www.zotero.org/styles). To get the ID of a style from the Zotero Style Repository, hover over any style in the list and click the "Link" link that appears to the right of the style's date. The ID will appear in the Style Search bar -- exclude the `id:` part:
+You can specify the citation format to use in your document with a `citation-style` property in your `scholfile.yaml` -- just specify the ID of any style in the [Zotero Style Repository](https://www.zotero.org/styles). To get the ID of a style from the Zotero Style Repository, hover over any style in the list and click the "Link" link that appears to the right of the style's date. The ID will appear in the Style Search bar -- exclude the `id:` part:
 
 ```yaml
 citation-style: apa-5th-edition
