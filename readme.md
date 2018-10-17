@@ -1,22 +1,23 @@
 # `schol`
 
-`schol` is a command line tool that makes it easy to write academic documents in Markdown, manage citations, and publish your work to the web.
+![schol logo][schol.svg]
+
+`schol` is a command line tool that makes it easy to write academic documents in Markdown, automatically manage citations, and publish your work to the web.
 
 ## Why `schol`?
-
-Why should you use `schol`? What does `schol` have that other systems don't?
 
  - `schol`'s default output format is mobile and web friendly
  - `schol` makes managing citations easy
  - `schol` lets you publish your work to the web with a single command
- - `schol` is built with Node.js and npm, making it cross-platform and easy to install and extend
- - `schol lets` you author your work in Markdown
+ - `schol` is built with Node.js, making it easy to install
+ - `schol` is easy to install
+ - `schol` lets you write in Markdown
 
 ## <a name="#requirements">System Requirements</a>
 
 You can use `schol` on any machine with the following:
 
- - Node.js 8.11 or later
+ - Node.js 8.12 or later
  - Your favorite text editor (Sublime Text, Atom, VSCode, etc.)
  - Your favorite terminal (CMD, PowerShell, Hyper, iTerm2, zsh, bash, etc.)
  - A modern web browser (Chrome, Edge, Firefox, Opera, Safari, etc.)
@@ -34,7 +35,7 @@ npm install -g schol
 
 ## Getting Started
 
-Let's start a new `schol` project. Create a new folder for the project, navigate into it, and initialize the project:
+To start a new `schol` project, create a new folder for the project, navigate into it, and initialize the project with `schol init`:
 
 ```sh
 mkdir assignment
@@ -80,7 +81,7 @@ Your work is now published to the web.
 
 ### Templates and Front Matter Metadata
 
-Every `schol` document has a template that determines how it is rendered. Specify your document template with the `template` property in `scholfile.yaml` in the root directory of your project:
+Every `schol` document has a template that determines how it is rendered. Specify your document template with the `template` property in your document:
 
 ```yaml
 template: ./my-assignment-template/
@@ -124,6 +125,7 @@ Author your content in [CommonMark markdown](https://spec.commonmark.org/0.28/) 
 ```markdown
 author: Jamie Czerwinski
 ---
+
 # Introduction
 
 Lorem ipsum...
@@ -154,14 +156,14 @@ To make a citation, use a bracketed caret symbol and citation label:
 According to this citation,[^citation-label] ...
 ```
 
-Citation labels require references entries in your document front matter:
+Make sure that each citation has a `references` entry in your document front matter:
 
 ```yaml
 references:
     citation-label: http://www.some-citation.com
 ```
 
-A references entry can be:
+A reference entry can be:
 
 1. A URL
 2. [Anything accepted by Citation.js](https://citation.js.org/api/tutorial-input_formats.html)
@@ -174,13 +176,15 @@ If this happens, you can either leave it as is, find a URL for the resource you 
 
 #### Citation Styles
 
-You can specify the citation format to use in your document with a `citation-style` property in your `scholfile.yaml` -- just specify the ID of any style in the [Zotero Style Repository](https://www.zotero.org/styles). To get the ID of a style from the Zotero Style Repository, hover over any style in the list and click the "Link" link that appears to the right of the style's date. The ID will appear in the Style Search bar -- exclude the `id:` part:
+You can specify the citation format to use in your document with a `citation_style` property in your document's front matter -- just specify the ID of any style in the [Zotero Style Repository](https://www.zotero.org/styles).
+
+To get the ID of a style from the Zotero Style Repository, hover over any style in the list and click the "Link" link that appears to the right of the style's date. The ID will appear in the Style Search bar -- exclude the `id:` part:
 
 ```yaml
-citation-style: apa-5th-edition
+citation_style: apa-5th-edition
 ```
 
-If no `citation-style` is specified, `schol` defaults to `apa-5th-edition`.
+If no `citation_style` is specified, `schol` defaults to `apa-5th-edition`.
 
 ## CLI Reference
 
