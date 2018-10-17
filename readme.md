@@ -224,4 +224,5 @@ This command requires a GitHub repository be set up for this project. Follow the
 ### Contributors
 
 [![jczerwinski](https://github.com/jczerwinski.png?size=100)](http://github.com/jczerwinski)
+
 [Jamie Czerwinski](http://github.com/jczerwinski)
