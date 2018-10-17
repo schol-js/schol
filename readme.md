@@ -16,7 +16,7 @@ schol is a command line tool that makes it easy to write academic documents in M
    - [Citation Management](#citation-management)
    - [Citation Styles](#citation-styles)
  - [CLI Reference](#cli-reference)
- - [Credits](#credits)
+ - [Contributors](#contributors)
 
 
 ## Why schol?
@@ -219,9 +219,7 @@ This command requires a GitHub repository be set up for this project. Follow the
 2. Run `schol publish`
 3. [Set up your GitHub repository to publish from the `docs/` folder in your project.](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch)
 
-## Credits
-
-### Contributors
+## Contributors
 
 |[![jczerwinski](https://github.com/jczerwinski.png?size=100)](http://github.com/jczerwinski) |
 |:-:|
