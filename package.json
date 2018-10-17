@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "citation-js": "^0.4.0-9",
-    "commander": "^2.18.0",
+    "commander": "^2.19.0",
     "generator-schol": "*",
     "jstransformer-ejs": "^0.2.0",
     "markdown-it": "^8.4.2",

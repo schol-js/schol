@@ -33,11 +33,13 @@ let ms = Metalsmith(process.cwd())
 schol
   .command('init')
   .description('Initializes a new schol project in the current directory.')
+  .option('-c, --citation_style', 'Citation style')
+  .option('-t, --template', 'Template')
   .action(function (env, options) {
     var yeoman = require('yeoman-environment');
     var yoEnv = yeoman.createEnv();
     yoEnv.register(require.resolve('generator-schol'), 'schol');
-    yoEnv.run('schol');
+    yoEnv.run('schol', options);
   });
 
 schol

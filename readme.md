@@ -2,7 +2,7 @@
 
 > Academic writing made easy.
 
-schol is a command line tool that makes it easy to write academic documents in Markdown, automatically manage and format citations, and publish your work to the web.
+schol is a command line tool that makes it easy to write academic documents in Markdown and automatically manage and format citations.
 
 ## Contents
 
@@ -23,7 +23,6 @@ schol is a command line tool that makes it easy to write academic documents in M
 
  - Mobile accessible output
  - Built in citation management with automatic formatting
- - Easy publishing to GitHub Pages
  - Cross-platform and easy to install
 
 ## System Requirements
@@ -32,7 +31,6 @@ schol is a command line tool that makes it easy to write academic documents in M
  - Your favorite text editor (Sublime Text, Atom, VSCode, etc.)
  - Your favorite terminal (CMD, PowerShell, Hyper, iTerm2, zsh, bash, etc.)
  - A modern web browser (Chrome, Edge, Firefox, Opera, Safari, etc.)
- - Git (For publishing to GitHub Pages)
 
 ## Installation
 
@@ -78,13 +76,12 @@ schol render
 
 This will save a copy of your finished work and all necessary files to the `docs/` folder in your project directory. Distribute these files however you want -- for example, submit them for grading or review, or upload them to a website for publication.
 
-To use `schol` to publish your work to [GitHub Pages free web hosting service](](https://pages.github.com/):
+To publish your work to [GitHub Pages free web hosting service](](https://pages.github.com/):
 
 1. [Create a new GitHub repository and push your project to it.](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
-2. Run `schol publish`
-3. [Set up your GitHub repository to publish from the `docs/` folder in your project.](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch)
+2. [Set up your GitHub repository to publish from the `docs/` folder in your project.](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch)
 
-Your work is now published to the web.
+Your work is now published to the web!
 
 ## Features
 
@@ -208,16 +205,6 @@ Opens your project in your web browser and watches for changes to the project. A
 ### `schol render`
 
 Generates a distributable and/or publishable version of your project in the `docs/` folder.
-
-### `schol publish`
-
-Publish the most recently rendered version of the project to GitHub Pages. Will not publish changes made following the most recent execution of `schol render` or `schol edit`.
-
-This command requires a GitHub repository be set up for this project. Follow these steps to ensure `schol publish` works properly:
-
-1. [Create a new GitHub repository and push your project to it.](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
-2. Run `schol publish`
-3. [Set up your GitHub repository to publish from the `docs/` folder in your project.](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch)
 
 ## Contributors
 
