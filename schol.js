@@ -22,7 +22,7 @@ let ms = Metalsmith(process.cwd())
   .destination('docs')
   .use(cite)
   .use(markdown)
-  .use(require('./layouts.js')({
+  .use(require('./layouts')({
     default: 'schol-template-default',
     directory: 'templates',
     pattern: '**/*.md'

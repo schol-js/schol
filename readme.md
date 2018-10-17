@@ -1,27 +1,38 @@
-# [![schol](schol1.png)](https://github.com/schol-js/schol)
+# [![schol](media/schol.png)](https://github.com/schol-js/schol)
 
-`schol` is a command line tool that makes it easy to write academic documents in Markdown, automatically manage citations, and publish your work to the web.
+> Academic writing made easy.
 
-## Why `schol`?
+schol is a command line tool that makes it easy to write academic documents in Markdown, automatically manage and format citations, and publish your work to the web.
 
- - `schol`'s default output format is mobile and web friendly
- - `schol` makes managing citations easy
- - `schol` lets you publish your work to the web with a single command
- - `schol` is built with Node.js, making it easy to install
- - `schol` is easy to install
- - `schol` lets you write in Markdown
+## Contents
 
-## <a name="#requirements">System Requirements</a>
+ - [Why schol?](#why-schol)
+ - [System Requirements](#system-requirements)
+ - [Installation](#installation)
+ - [Getting Started](#getting-started)
+ - [Features](#features)
+   - [Templates and Front Matter Metadata](#templates-and-front-matter-metadata)
+   - [Content](#content)
+   - [Citation Management](#citation-management)
+   - [Citation Styles](#citation-styles)
+ - [CLI Reference](#cli-reference)
+ - [Credits](#credits)
 
-You can use `schol` on any machine with the following:
+
+## Why schol?
+
+ - Mobile accessible output
+ - Built in citation management with automatic formatting
+ - Easy publishing to GitHub Pages
+ - Cross-platform and easy to install
+
+## System Requirements
 
  - Node.js 8.12 or later
  - Your favorite text editor (Sublime Text, Atom, VSCode, etc.)
  - Your favorite terminal (CMD, PowerShell, Hyper, iTerm2, zsh, bash, etc.)
  - A modern web browser (Chrome, Edge, Firefox, Opera, Safari, etc.)
  - Git (For publishing to GitHub Pages)
-
-This includes all modern varieties of Windows, MacOS, and Linux.
 
 ## Installation
 
@@ -192,7 +203,7 @@ Initializes a new `schol` project in the current directory.
 
 ### `schol edit`
 
-Opens your project in your web browser and watches for changes to the project. Automatically rebuilds the project and refreshes the browser when changes are detected.
+Opens your project in your web browser and watches for changes to the project. Automatically rebuilds the project and refreshes the browser when changes are detected. Does the same thing as `schol render`, but rebuild the project as changes happen in real-time.
 
 ### `schol render`
 
@@ -200,10 +211,16 @@ Generates a distributable and/or publishable version of your project in the `doc
 
 ### `schol publish`
 
-Publish the most recently rendered version of the project to GitHub Pages. Will not publish changes made following the most recent execution of `schol render`.
+Publish the most recently rendered version of the project to GitHub Pages. Will not publish changes made following the most recent execution of `schol render` or `schol edit`.
 
 This command requires a GitHub repository be set up for this project. Follow these steps to ensure `schol publish` works properly:
 
 1. [Create a new GitHub repository and push your project to it.](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 2. Run `schol publish`
 3. [Set up your GitHub repository to publish from the `docs/` folder in your project.](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch)
+
+## Credits
+
+### Contributors
+
+[![jczerwinski](//github.com/jczerwinski.png?size=100)](http://github.com/jczerwinski)
