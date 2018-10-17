@@ -1,6 +1,4 @@
-# `schol`
-
-![schol logo](schol.png)
+[![schol logo](schol.png)](https://github.com/schol-js/schol)
 
 `schol` is a command line tool that makes it easy to write academic documents in Markdown, automatically manage citations, and publish your work to the web.
 
