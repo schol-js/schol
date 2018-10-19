@@ -68,13 +68,13 @@ function render_citation(tokens, idx, options, env, slf) {
   return env.bibliography.format('citation', {
     format: 'html',
     entry: tokens[idx].meta.label,
-    template: env.citation_style
+    template: env.citation_style || 'apa'
   });
 }
 
 function render_bibliography (tokens, idx, options, env) {
   return env.bibliography.format('bibliography', {
     format: 'html',
-    template: env.citation_style
+    template: env.citation_style || 'apa'
   });
 }

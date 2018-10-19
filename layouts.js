@@ -42,7 +42,6 @@ function getLayout({ file, settings, metalsmith }) {
     if (!fs.existsSync(layoutPath)) {
       layoutPath = require.resolve(file.template, {paths: [process.cwd()]});
     }
-
     return layoutPath;
   }
   if (file.template === false) {

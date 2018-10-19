@@ -6,6 +6,7 @@ schol is a command line tool that makes it easy to write academic documents in M
 
 ## Contents
 
+ - [Disclaimer](#disclaimer)
  - [Why schol?](#why-schol)
  - [System Requirements](#system-requirements)
  - [Installation](#installation)
@@ -18,12 +19,18 @@ schol is a command line tool that makes it easy to write academic documents in M
  - [CLI Reference](#cli-reference)
  - [Contributors](#contributors)
 
+## Disclaimer
+
+schol is proof-of-concept, alpha software. It has no test suite, and is not designed to be particularly flexible, extensible, or pluggable. It was designed and implemented as a small indepedent study project as part of my M.Sc. program, and I do not necessarily intend to spend much time updating, maintaining, or improving it -- contributors are more than welcome to jump in!
+
+With that said, I designed it to meet a use case that I personally have had *myriad* times throughout my education -- to create, edit, and publish properly cited assignments and reports -- and it should work well enough as documented for this purpose.
 
 ## Why schol?
 
- - Mobile accessible output
- - Built in citation management with automatic formatting
- - Cross-platform and easy to install
+ - Mobile-accessible, web-first output by default
+ - Built-in citation management with automatic formatting for any citation style
+ - Cross-platform
+ - Easy and simple to install and use
 
 ## System Requirements
 
@@ -93,7 +100,7 @@ Every `schol` document has a template that determines how it is rendered. Specif
 template: ./my-assignment-template/
 ```
 
-If no `template` is specified, [schol-template-default] is used.
+You can [find a list of published templates on the wiki](https://github.com/schol-js/schol/wiki/templates). If no `template` is specified, [schol-template-default](https://github.com/schol-js/schol-template-default) is used.
 
 Templates embed document metadata like title and author details into their rendered output. Specify document metadata with a front matter section in your document:
 
@@ -109,18 +116,18 @@ date: 2018-09-01
 Different templates may require different front matter. For example, a template for a course assignment might require the following front matter:
 
 ```yaml
-assignment-name: Assignment 2
+assignment-name: Assignment 1
 authors:
-  - name: Jamie Czerwinski
-    email: jamie.czerwinski@gmail.com
-course-number: COMP 693
-course-name: Independent Study
+  - name: Your Name
+    email: your.name@example.com
+course-number: COMP 101
+course-name: Introduction to Computing
 teacher: Dr. Maiga Chang
-school: Athabasca University
+school: University of Liliput
 date: 2018-08-31
 ```
 
-The template will then render these values into a title section for your assignment.
+The template would then render these values into a title section for your assignment.
 
 Read the documentation for the template you are using to learn what metadata it requires.
 
@@ -169,16 +176,7 @@ references:
     citation-label: http://www.some-citation.com
 ```
 
-A reference entry can be:
-
-1. A URL
-2. [Anything accepted by Citation.js](https://citation.js.org/api/tutorial-input_formats.html)
-
-For URL references, `schol` will attempt to automatically parse citation data from the page.
-
-If unsuccessful, `schol` will print a warning and treat the citation as a URL without any citation metadata (eg. title, author, etc.). The citation will still appear in your references, but it will show minimal information.
-
-If this happens, you can either leave it as is, find a URL for the resource you are citing that includes embedded citation data, or manually add the citation data to your references.
+A reference entry can be anything accepted by Citation.js](https://citation.js.org/api/tutorial-input_formats.html)
 
 #### Citation Styles
 
@@ -187,20 +185,24 @@ You can specify the citation format to use in your document with a `citation_sty
 To get the ID of a style from the Zotero Style Repository, hover over any style in the list and click the "Link" link that appears to the right of the style's date. The ID will appear in the Style Search bar -- exclude the `id:` part:
 
 ```yaml
-citation_style: apa-5th-edition
+citation_style: apa
 ```
 
-If no `citation_style` is specified, `schol` defaults to `apa-5th-edition`.
+If no `citation_style` is specified, `schol` defaults to `apa`.
 
 ## CLI Reference
 
-### `schol init`
+### `schol init [--template, -t template=schol-template-default]`
 
 Initializes a new `schol` project in the current directory.
 
+#### Options
+
+**template**: The [schol template](https://github.com/schol-js/schol/wiki/Templates) to initialize this project with.
+
 ### `schol edit`
 
-Opens your project in your web browser and watches for changes to the project. Automatically rebuilds the project and refreshes the browser when changes are detected. Does the same thing as `schol render`, but rebuild the project as changes happen in real-time.
+Opens your project in your web browser and watches for changes to the project. Automatically rebuilds the project and refreshes the browser when changes are detected. Does the same thing as `schol render`, but rebuilds the project as changes happen in real-time.
 
 ### `schol render`
 
