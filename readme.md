@@ -170,7 +170,50 @@ references:
     citation-label: http://www.some-citation.com
 ```
 
-A reference entry can be anything accepted by [Citation.js](https://citation.js.org/api/tutorial-input_formats.html)
+#### Reference Format
+
+A reference entry can be anything accepted by [Citation.js](https://citation.js.org/api/tutorial-input_formats.html), including any of the following:
+
+ - Digital Object Identifier (DOI)
+   - `10.1109/5.771073`
+ - DOI URL
+   - `https://doi.org/10.1109/5.771073`
+ - [Wikidata ID](https://www.wikidata.org)
+   - `Q24262882`
+ - [Wikidata URL](https://www.wikidata.org)
+   - `https://www.wikidata.org/wiki/Q24262882`
+ - [BibTeX string](http://www.bibtex.org/Format/)
+   - 
+     ```
+     @article{paskin1999toward,
+       title={Toward unique identifiers},
+       author={Paskin, Norman},
+       journal={Proceedings of the IEEE},
+       volume={87},
+       number={7},
+       pages={1208--1227},
+       year={1999},
+       publisher={IEEE}
+     }
+     ```
+ - [BibJSON](http://okfnlabs.org/bibjson/)
+   - 
+     ```
+     {
+       "title": "Toward unique identifiers",
+       "type": "article",
+       "author": [
+         {
+           "name": "Norman Paskin"
+         }
+       ],
+       "journal": "Proceedings of the IEEE",
+       "year": "1999",
+       "volume": "87",
+       "number": "7",
+       "pages": "1208--1227"
+     }
+     ```
 
 #### Citation Styles
 
