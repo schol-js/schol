@@ -170,7 +170,7 @@ references:
     citation-label: http://www.some-citation.com
 ```
 
-A reference entry can be anything accepted by Citation.js](https://citation.js.org/api/tutorial-input_formats.html)
+A reference entry can be anything accepted by [Citation.js](https://citation.js.org/api/tutorial-input_formats.html)
 
 #### Citation Styles
 
