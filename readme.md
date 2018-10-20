@@ -187,8 +187,7 @@ A reference entry can be anything accepted by [Citation.js](https://citation.js.
    - `https://www.wikidata.org/wiki/Q24262882`
 
  - [BibTeX string](http://www.bibtex.org/Format/)
-   - 
-     ```
+   - ```
      @article{paskin1999toward,
        title={Toward unique identifiers},
        author={Paskin, Norman},
@@ -200,10 +199,9 @@ A reference entry can be anything accepted by [Citation.js](https://citation.js.
        publisher={IEEE}
      }
      ```
-     
+
  - [BibJSON](http://okfnlabs.org/bibjson/)
-   - 
-     ```
+   - ```
      {
        "title": "Toward unique identifiers",
        "type": "article",
