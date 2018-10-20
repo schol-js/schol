@@ -176,12 +176,16 @@ A reference entry can be anything accepted by [Citation.js](https://citation.js.
 
  - Digital Object Identifier (DOI)
    - `10.1109/5.771073`
+
  - DOI URL
    - `https://doi.org/10.1109/5.771073`
+
  - [Wikidata ID](https://www.wikidata.org)
    - `Q24262882`
+
  - [Wikidata URL](https://www.wikidata.org)
    - `https://www.wikidata.org/wiki/Q24262882`
+
  - [BibTeX string](http://www.bibtex.org/Format/)
    - 
      ```
@@ -196,6 +200,7 @@ A reference entry can be anything accepted by [Citation.js](https://citation.js.
        publisher={IEEE}
      }
      ```
+     
  - [BibJSON](http://okfnlabs.org/bibjson/)
    - 
      ```
