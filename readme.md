@@ -19,12 +19,6 @@ schol is a command line tool that makes it easy to write academic documents in M
  - [CLI Reference](#cli-reference)
  - [Contributors](#contributors)
 
-## Disclaimer
-
-schol is proof-of-concept, alpha software. It has no test suite, and is not designed to be particularly flexible, extensible, or pluggable. It was designed and implemented as a small indepedent study project as part of my M.Sc. program, and I do not necessarily intend to spend much time updating, maintaining, or improving it -- contributors are more than welcome to jump in!
-
-With that said, I designed it to meet a use case that I personally have had *myriad* times throughout my education -- to create, edit, and publish properly cited assignments and reports -- and it should work well enough as documented for this purpose.
-
 ## Why schol?
 
  - Mobile-accessible, web-first output by default
