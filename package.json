@@ -1,6 +1,6 @@
 {
   "name": "schol",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "schol is a command line tool that makes it easy to write academic documents in Markdown, manage citations, and publish your work to the web.",
   "main": "schol.js",
   "bin": "schol.js",
@@ -17,6 +17,8 @@
     "generator-schol": "^0.1.1",
     "jstransformer-ejs": "^0.2.0",
     "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.0.2",
+    "markdown-it-toc-done-right": "^2.0.3",
     "metalsmith": "^2.3.0",
     "metalsmith-browser-sync": "^1.1.1",
     "metalsmith-layouts": "^2.2.0",

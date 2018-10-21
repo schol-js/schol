@@ -124,10 +124,14 @@ function cite (files, smith, done) {
 
 function markdown (files, metalsmith, done) {
   let markdownIt = require('markdown-it');
-  let markdownItCitations = require('./markdown-it-citations');
+  let citations = require('./markdown-it-citations');
+  let anchors = require('markdown-it-anchor');
+  let toc = require('markdown-it-toc-done-right');
 
   let md = markdownIt()
-    .use(markdownItCitations);
+    .use(citations)
+    .use(anchors, {permalink: true})
+    .use(toc);
   
   Object.keys(files).filter(minimatch.filter('**/*.md')).forEach(filename => {
     let file = files[filename];

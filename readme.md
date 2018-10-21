@@ -141,6 +141,10 @@ Lorem ipsum...
 
 `schol` parses your content with [markdown-it](https://github.com/markdown-it/markdown-it) and inserts it into your template for rendering.
 
+#### Table of Contents
+
+To include a Table of Contents within your document, insert `${toc}` wherever you would like the table to appear.
+
 ### Citation Management
 
 `schol` appends your references to the end of your document, so remember to add a "References" or "Bibliography" header as the last line of your content:
