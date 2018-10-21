@@ -42,7 +42,7 @@ schol
       getMetalsmith()
         .use(require('metalsmith-browser-sync')({
           server: 'docs',
-          files: ['**/*']
+          files: ['src/**/*', 'node_modules/**/*']
         }))
         .build(err => {
           if (err) throw err;
