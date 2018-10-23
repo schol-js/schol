@@ -1,4 +1,6 @@
-// Shamelessly copied from https://github.com/metalsmith/metalsmith-layouts
+/**
+ * Adapted from https://github.com/metalsmith/metalsmith-layouts
+ */
 
 const debug = require('debug')('metalsmith-layouts');
 const match = require('multimatch');

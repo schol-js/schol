@@ -1,5 +1,6 @@
-// Process citations
-//
+/**
+ * Adapted from https://github.com/markdown-it/markdown-it-footnote
+ */
 'use strict';
 
 module.exports = function markdown_it_citations(markdown) {

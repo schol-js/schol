@@ -6,7 +6,6 @@ schol is a command line tool that makes it easy to write academic documents in M
 
 ## Contents
 
- - [Disclaimer](#disclaimer)
  - [Why schol?](#why-schol)
  - [System Requirements](#system-requirements)
  - [Installation](#installation)

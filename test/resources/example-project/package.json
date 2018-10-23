@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "description": "",
+  "version": "0.0.0",
+  "dependencies": {
+    "schol-template-default": "latest"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}

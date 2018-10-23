@@ -3,17 +3,23 @@
 /**
  * Module dependencies.
  */
- 
+
+let path = require('path');
 let minimatch = require('minimatch');
 let schol = require('yargs');
-
 let Citation;
 
+/**
+ * Root level command
+ */
 schol
   .scriptName('schol')
   .demandCommand(1, 'Choose a command and run schol [command] to proceed.')
   .recommendCommands();
 
+/**
+ * schol init
+ */
 schol
   .command({
     command: 'init',
@@ -22,7 +28,7 @@ schol
       return yargs
         .option('template', {
           alias: 't',
-          describe: 'Schol template to use for this project. Can be a local path or a node module.',
+          describe: 'schol template to use for this project. Can be a local path or a node module.',
           type: 'string',
           default: 'schol-template-default'
         });
@@ -34,9 +40,13 @@ schol
       yoEnv.run('schol:app', argv);
     }
   })
+/**
+ * schol edit
+ */
   .command({
     command: 'edit',
     desc: 'Reload your project in your web browser as you save changes.',
+
     handler: () => {
       Citation = require('citation-js');
       getMetalsmith()
@@ -49,6 +59,9 @@ schol
         });
     }
   })
+/**
+ * schol render
+ */
   .command({
     command: 'render',
     desc: 'Generates a distributable and/or publishable version of your project in the docs/ folder.',
@@ -63,6 +76,9 @@ schol
 
 module.exports = schol;
 
+/**
+ * Metalsmith middleware for processing citations
+ */
 function cite (files, smith, done) {
   let axios = require('axios');
 
@@ -122,6 +138,9 @@ function cite (files, smith, done) {
     });
 }
 
+/**
+ * Metalsmith middleware to process markdown
+ */
 function markdown (files, metalsmith, done) {
   let markdownIt = require('markdown-it');
   let citations = require('./markdown-it-citations');
@@ -140,6 +159,9 @@ function markdown (files, metalsmith, done) {
   setImmediate(done);
 }
 
+/**
+ * Helper to build bibliography
+ */
 function buildBibliography (refs) {
   let bibliography = new Citation();
 
@@ -163,8 +185,8 @@ function buildBibliography (refs) {
 }
 
 /**
- *
- * Generate formatting parameters for the template. Required for spacing, indentation, etc.
+ * 
+ * Helper to generate formatting parameters for the template. Required for spacing, indentation, etc.
  *
  * Adapted from  https://github.com/Juris-M/citeproc-js/blob/master/manual/citeproc-doc.rst#return-value
  * 
@@ -178,7 +200,10 @@ function getCslFormat (engine, style) {
   return format;
 }
 
-function getMetalsmith (argv) {
+/**
+ * Helper to get metalsmith instance. Ensures the base instance is the same between commands
+ */
+function getMetalsmith () {
   let Metalsmith = require('metalsmith');
 
   let ms = Metalsmith(process.cwd())

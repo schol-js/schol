@@ -5,7 +5,7 @@
   "main": "schol.js",
   "bin": "schol.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": {
     "name": "Jamie Czerwinski",
@@ -14,7 +14,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "citation-js": "^0.4.0-9",
-    "generator-schol": "^0.1.1",
+    "generator-schol": "^0.3.0",
     "jstransformer-ejs": "^0.2.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2",
@@ -27,5 +27,11 @@
     "yargs": "^12.0.2",
     "yeoman-environment": "^2.3.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "diff": "^3.5.0",
+    "execa": "^1.0.0",
+    "mocha": "^5.2.0",
+    "rimraf": "^2.6.2"
+  }
 }
