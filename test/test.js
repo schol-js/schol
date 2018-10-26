@@ -14,7 +14,7 @@ describe('schol', function () {
   this.timeout(0);
   it('should print a prompt that advises how to use the program and quit with an error', async function () {
     try {
-      await execa('node', ['./schol.js']);
+      await execa('node', ['./index.js']);
     } catch (err) {
       const d = diff.diffLines(err.stderr, output);
       assert(!d.added);
@@ -35,7 +35,7 @@ describe('schol', function () {
       rimraf(testPath, function () {
         fs.mkdirSync(testPath);
         process.chdir(testPath);
-        execa('node', ['../schol.js', 'init']).then(function () {
+        execa('node', ['../index.js', 'init']).then(function () {
           process.chdir('..');
           done();
         });
@@ -77,8 +77,8 @@ describe('schol', function () {
       rimraf(testPath, function () {
         fs.mkdirSync(testPath);
         process.chdir(testPath);
-        execa('node', ['../schol.js', 'init']).then(function () {
-          execa('node', ['../schol.js', 'render']).then(() => {
+        execa('node', ['../index.js', 'init']).then(function () {
+          execa('node', ['../index.js', 'render']).then(() => {
             process.chdir('..');
             done();
           });
@@ -122,8 +122,8 @@ describe('schol', function () {
       rimraf(testPath, function () {
         fs.mkdirSync(testPath);
         process.chdir(testPath);
-        execa('node', ['../schol.js', 'init']).then(function () {
-          let server = execa('node', ['../schol.js', 'edit']);
+        execa('node', ['../index.js', 'init']).then(function () {
+          let server = execa('node', ['../index.js', 'edit']);
           process.chdir('..');
           // Grab the rendered page once the server spins up.
           let interval = setInterval(function () {
