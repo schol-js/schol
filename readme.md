@@ -76,7 +76,7 @@ schol render
 
 This will save a copy of your finished work and all necessary files to the `docs/` folder in your project directory. Distribute these files however you want -- for example, submit them for grading or review, or upload them to a website for publication.
 
-To publish your work to [GitHub Pages free web hosting service]((https://pages.github.com/):
+To publish your work to [GitHub Pages free web hosting service](https://pages.github.com/):
 
 1. [Create a new GitHub repository and push your project to it.](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 2. [Set up your GitHub repository to publish from the `docs/` folder in your project.](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch)
