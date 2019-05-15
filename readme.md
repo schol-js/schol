@@ -7,6 +7,7 @@ schol is a command line tool that makes it easy to write academic documents in M
 ## Contents
 
  - [Why schol?](#why-schol)
+ - [Demo Videos](#demo-videos)
  - [System Requirements](#system-requirements)
  - [Installation](#installation)
  - [Getting Started](#getting-started)
@@ -24,6 +25,12 @@ schol is a command line tool that makes it easy to write academic documents in M
  - Built-in citation management with automatic formatting for any citation style
  - Cross-platform
  - Easy and simple to install and use
+
+## Demo Videos
+
+ - [How to use schol](https://www.youtube.com/watch?v=e7cQLlZk8LU)
+ - [How to contribute to schol development](https://www.youtube.com/watch?v=sWnNRUXfjrE)
+ - [How to develop schol templates](https://www.youtube.com/watch?v=4JWafzK6h4c)
 
 ## System Requirements
 

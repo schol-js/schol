@@ -6,6 +6,8 @@ Follow this guide to contribute to schol development.
 
 The recommended way to begin creating a new schol template is to clone the [schol-template-default repository](https://github.com/schol-js/schol-template-default). Detailed instructions are available on that repo's readme.
 
+There's also [a video demonstrating how to create new templates on YouTube](https://www.youtube.com/watch?v=4JWafzK6h4c).
+
 ## Developing schol
 
 To get started developing schol, you'll need Git 2.19+, Node 8.12+, a text editor, and a terminal.
@@ -23,6 +25,8 @@ You can then open the project files in your text editor and hack away. Run `npm 
 If you want to test your local version of schol from the command line, run `npm link` from within the schol directory. This will link your global `schol` command to your local version of schol.
 
 You may also wish to make changes to [generator-schol](https://github.com/schol-js/generator-schol) -- this is the dependency schol uses to initialize new projects.
+
+There's also [a video demonstrating how to contribute to schol development on YouTube](https://www.youtube.com/watch?v=sWnNRUXfjrE).
 
 ### Contributing to the schol repo
 
